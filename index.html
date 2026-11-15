@@ -1,67 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Main Stuff -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>♡xpfm｜new album out december 11th.</title>
-    <link rel="icon" type="image/x-icon" href="LOGO2.png">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="♡xpfm — digital hardcore / gabber / footwork. new album out december 11th. music, merch and socials.">
+    <meta name="theme-color" content="#151515">
+
+    <!-- link previews. once the site has its final address, add absolute og:url and og:image tags here -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="♡xpfm｜new album out december 11th.">
+    <meta property="og:description" content="digital hardcore • gabber • footwork. music, merch and socials.">
+
+    <link rel="icon" type="image/png" href="LOGO2.png">
+
+    <!-- Fonts: JetBrains Mono + Libre Barcode 128 Text (one request) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Libre Barcode 128 Text -->
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap" rel="stylesheet">
-    <!-- JetBrains Mono -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
-    <script defer src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Libre+Barcode+128+Text&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
-<header>
-    <h1>
-        <img src="LOGO.gif" alt="♡xpfm" height="100" width="256" class="logo" id="logo">
-    </h1>
-    <br>
-    <p class="jetbrains-mono headerp text">digital hardcore • gabber</p>
-    <br>
-    <nav class="jetbrains-mono nav">
-        <a href="music.html" class="text">music</a>
-        ・
-        <a href="merch.html" class="text">merch</a>
-        ・
-        <a href="socials.html" class="text">socials</a>
-    </nav>
-</header>
+<a class="skip" href="#main">skip to content</a>
 
-<br>
+<div id="site">
+    <header>
+        <h1>
+            <img src="LOGO.gif" alt="♡xpfm" width="1280" height="660" class="logo" id="logo">
+        </h1>
+        <p class="jetbrains-mono tagline text">digital hardcore • gabber • footwork</p>
+        <nav class="jetbrains-mono nav" aria-label="main">
+            <a href="music.html" class="text">music</a>
+            <span aria-hidden="true">・</span>
+            <a href="merch.html" class="text">merch</a>
+            <span aria-hidden="true">・</span>
+            <a href="socials.html" class="text">socials</a>
+        </nav>
+    </header>
 
-<section class="block">
-    <h2 class="libre-barcode-128-text-regular big">WEEKLY NEWS IV /// STREAMING PLATFORMS</h2>
-    <p class="jetbrains-mono">
-        hi, everyone 🕷 i have talked about️ this before… & you guys may have noticed by now: i partly left streaming platforms (& will soon leave spotify completely). that's right, i only kept the major releases, like albums & ep's, and removed the other releases on streaming platforms, which includes the singles for my upcoming album… however, the singles will be present but only on bandcamp. & talking about the singles, a new double single released today: "<a
-            href="https://krisnyrae.bandcamp.com/track/--31">精神的な</a>／<a href="https://krisnyrae.bandcamp.com/track/--33">集まり</a>." you can listen by clicking the track names.
-</section>
+    <main id="main" tabindex="-1">
+        <section class="block" id="countdown" aria-labelledby="cd-title">
+            <h2 class="kicker" id="cd-title"><a href="https://krisnyrae.bandcamp.com/album/illusions-elsewhere">？虚像の彼方？</a> <span id="cd-status">out december 11th</span></h2>
+            <div class="count" role="timer">
+                <div><b data-u="d">--</b><span>days</span></div>
+                <div><b data-u="h">--</b><span>hrs</span></div>
+                <div><b data-u="m">--</b><span>min</span></div>
+                <div><b data-u="s">--</b><span>sec</span></div>
+            </div>
+        </section>
 
-<br>
+        <article class="block news">
+            <h2 class="libre-barcode-128-text-regular big">WEEKLY NEWS IV /// STREAMING PLATFORMS</h2>
+            <p class="jetbrains-mono">
+                hi, everyone 🕷 i have talked about this before… &amp; you guys may have noticed by now: i partly left streaming platforms (&amp; will soon leave spotify completely). that's right, i only kept the major releases, like albums &amp; ep's, and removed the other releases on streaming platforms, which includes the singles for my upcoming album… however, the singles will be present but only on bandcamp. &amp; talking about the singles, a new double single released today: "<a href="https://krisnyrae.bandcamp.com/track/--31">精神的な</a>／<a href="https://krisnyrae.bandcamp.com/track/--33">集まり</a>." you can listen by clicking the track names.
+            </p>
+        </article>
+    </main>
 
-<footer>
-    <p class="jetbrains-mono">© 2026 ♡xpfm. All rights reserved.</p>
-</footer>
+    <footer class="jetbrains-mono">
+        <p class="text">© 2026 ♡xpfm. All rights reserved.</p>
+        <button type="button" class="text btn" id="calm-toggle" hidden aria-label="turn the flickering background on or off">flicker: on</button>
+    </footer>
+</div>
 
-<div id="warning">
+<div id="warning" role="dialog" aria-modal="true" aria-labelledby="warning-title" aria-describedby="warning-text">
     <div class="warning-box">
-        <h2 class="jetbrains-mono">⚠ WARNING ⚠</h2>
-        <p class="jetbrains-mono">
+        <h2 class="jetbrains-mono" id="warning-title">⚠ WARNING ⚠</h2>
+        <p class="jetbrains-mono" id="warning-text">
             THIS WEBSITE CONTAINS<br>
             FLICKERING LIGHTS AND<br>
             FLASHING VISUALS.
         </p>
-
-        <button class="jetbrains-mono" onclick="enterSite()">
-            ENTER SITE →
-        </button>
+        <div class="actions">
+            <button type="button" data-enter="normal">ENTER SITE →</button>
+            <button type="button" data-enter="calm" class="secondary">ENTER WITHOUT FLICKER</button>
+        </div>
     </div>
 </div>
 
 </body>
-
 </html>
