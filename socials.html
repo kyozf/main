@@ -1,68 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Main Stuff -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>♡xpfm｜socials</title>
-    <link rel="icon" type="image/x-icon" href="LOGO2.png">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="♡xpfm — socials. instagram and bandcamp.">
+    <meta name="theme-color" content="#151515">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="♡xpfm｜socials">
+    <meta property="og:description" content="instagram and bandcamp.">
+
+    <link rel="icon" type="image/png" href="LOGO2.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Libre Barcode 128 Text -->
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap" rel="stylesheet">
-    <!-- JetBrains Mono -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
-    <script defer src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Libre+Barcode+128+Text&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
-<header>
-    <h1 class="libre-barcode-128-text-regular header">
-        <img src="LOGO.gif" alt="♡xpfm" height="100" width="256" class="logo">
-    </h1>
+<a class="skip" href="#main">skip to content</a>
 
-    <p class="jetbrains-mono headerp text">digital hardcore • gabber</p>
-    <br>
-    <nav class="jetbrains-mono nav">
-        <a href="music.html" class="text">music</a>
-        ・
-        <a href="merch.html" class="text">merch</a>
-        ・
-        <p class="text in">socials</p>
-    </nav>
-    <br>
-    <a href="index.html" class="jetbrains-mono">back to home →</a>
-</header>
+<div id="site">
+    <header>
+        <h1>
+            <img src="LOGO.gif" alt="♡xpfm" width="1280" height="660" class="logo" id="logo">
+        </h1>
+        <p class="jetbrains-mono tagline text">digital hardcore • gabber • footwork</p>
+        <nav class="jetbrains-mono nav" aria-label="main">
+            <a href="music.html" class="text">music</a>
+            <span aria-hidden="true">・</span>
+            <a href="merch.html" class="text">merch</a>
+            <span aria-hidden="true">・</span>
+            <a href="socials.html" class="text" aria-current="page">socials</a>
+        </nav>
+        <a href="index.html" class="jetbrains-mono back">back to home →</a>
+    </header>
 
-<br>
+    <main id="main" tabindex="-1">
+        <div class="block">
+            <div class="links">
+                <a href="https://www.instagram.com/kyozou.no.kanata/" class="libre-barcode-128-text-regular big">instagram</a>
+                <span aria-hidden="true">・</span>
+                <a href="https://kyozf.nstream.me/" class="libre-barcode-128-text-regular big">notestream</a>
+                <span aria-hidden="true">・</span>
+                <a href="https://krisnyrae.bandcamp.com" class="libre-barcode-128-text-regular big">bandcamp</a>
+            </div>
+        </div>
+    </main>
 
-<div class="block">
-    <a href="https://www.instagram.com/_x.1fm/" class="libre-barcode-128-text-regular big">instagram</a>
-    ・
-    <a href="https://krisnyrae.bandcamp.com" class="libre-barcode-128-text-regular big">bandcamp</a>
+    <img src="assets/art.png" alt="the album that i'm working on… not “？虚像の彼方？”" class="teaser">
+
+    <footer class="jetbrains-mono">
+        <p class="text">© 2026 ♡xpfm. All rights reserved.</p>
+        <button type="button" class="text btn" id="calm-toggle" hidden aria-label="turn the flickering background on or off">flicker: on</button>
+    </footer>
 </div>
 
-<br>
-
-<footer>
-    <p class="jetbrains-mono">© 2026 ♡xpfm. All rights reserved.</p>
-</footer>
-
-<div id="warning">
+<div id="warning" role="dialog" aria-modal="true" aria-labelledby="warning-title" aria-describedby="warning-text">
     <div class="warning-box">
-        <h2 class="jetbrains-mono">⚠ WARNING ⚠</h2>
-        <p class="jetbrains-mono">
+        <h2 class="jetbrains-mono" id="warning-title">⚠ WARNING ⚠</h2>
+        <p class="jetbrains-mono" id="warning-text">
             THIS WEBSITE CONTAINS<br>
             FLICKERING LIGHTS AND<br>
             FLASHING VISUALS.
         </p>
-
-        <button class="jetbrains-mono" onclick="enterSite()">
-            ENTER SITE →
-        </button>
+        <div class="actions">
+            <button type="button" data-enter="normal">ENTER SITE →</button>
+            <button type="button" data-enter="calm" class="secondary">ENTER WITHOUT FLICKER</button>
+        </div>
     </div>
 </div>
 
 </body>
-
 </html>
